@@ -1,7 +1,7 @@
 # Caesar Cipher Hacker
 # http://inventwithpython.com/hacking (BSD Licensed)
 
-message = 'GUVF VF ZL FRPERG ZRFFNTR.'
+message = str(input('Enter your Cipher.'))
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 # loop through every possible key
