@@ -1,0 +1,4 @@
+# List of lists
+a = [["K","S","12"],["M","L"]]
+print(a[0])
+print(a[0][2][1])
