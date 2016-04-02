@@ -1,0 +1,3 @@
+b = ["K","A","N","I","S","H","K"]
+print(b)
+print("".join(b))
