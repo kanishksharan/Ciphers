@@ -1,0 +1,38 @@
+import math
+
+def decryptMessage():
+
+    key = int(input("Input the cipher key\n"))
+    message = str(input("Input the String\n"))
+
+    # The number of "columns" in our transposition grid:
+    numOfRows = math.ceil(len(message) / key)
+
+    # The number of "rows" in our grid will need:
+    numOfColumns = key
+
+    # The number of "shaded boxes" in the last "column" of the grid:
+    numOfShadedBoxes = (numOfColumns * numOfRows) - len(message)
+
+    # Each string in plaintext represents a column in the grid.
+    plaintext = [''] * numOfRows
+
+    # The col and row variables point to where in the grid the next
+    # character in the encrypted message will go.
+    col = 0
+    row = 0
+
+    for symbol in message:
+        plaintext[row] += symbol
+        row += 1 # point to next column
+
+        # If there are no more rows OR we're at a shaded box, go back to
+        # the first row and the next column.
+        if (row == numOfRows) or (row == numOfRows - 1 and col >= numOfColumns - numOfShadedBoxes):
+            row = 0
+            col += 1
+
+    print("".join(plaintext))
+    return ''.join(plaintext)
+
+decryptMessage()
