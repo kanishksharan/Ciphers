@@ -1,0 +1,18 @@
+# Converting str to list, each element one separate list item
+
+s = str(input("Enter nay text\n"))
+l = s.split()
+b = [""] * len(s)
+for i in range(len(s)):
+    j = i
+    while j == i:
+        b[i] = s[i]
+        j += 1
+
+
+
+
+print(s)
+print(l)
+print(b)
+print("kanishk"[4])
